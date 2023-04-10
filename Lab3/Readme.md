@@ -1,5 +1,5 @@
 # Make the Robot Move
-**List the names and NetID for your partners here.**
+Pratul Tandon (pt347), Trevor Morcott (trm75), Maria Teresa Parreira (mb2554)
 
 
 In this week's lab, you will lay the foundations for your mobile robot. We will control commercially available hoverboards (Dr. Ju bought these on eBay) with ODrive motor controllers. This week's lab can be challenging. Be prepared to get your hands dirty.
@@ -27,6 +27,7 @@ Starting with this lab, form a group of 3 to 4 people (doesn't have to be the sa
 2.  strength to take things apart
 
 
+
 ### For students in Ithaca
 Please bring all items I have shipped to you to the robotics lab in Upson. You will need both the raspberry pi and the hoverboards.
 - Use the [RPi Imager](https://www.raspberrypi.com/software/) to write [class image](https://drive.google.com/file/d/1PMWyJUoA-CJ73vktrp3nPKiykwzOaauU/view?usp=sharing) to the SD cards (You will need to flash one card per group). [Online Guide](https://howchoo.com/pi/raspberry-pi-imager#write-a-custom-image). Please do this before Thursday's lab.
@@ -36,10 +37,25 @@ Please bring all items I have shipped to you to the robotics lab in Upson. You w
 0. a video showing that you can control the hoverboard through python
 1. three sketches of potential robots you can build with this platform. Be more realistic and think of these sketches as potential candidates for your final project. (Look around, what objects can you make mobile?)
 
+### SUBMISSIONS:
+
+0. video
+
+
+https://user-images.githubusercontent.com/62056130/220243791-8347b53f-af5b-4f8e-9f33-82e79199acfe.MOV
+
+1. Sketches:
+
+![TippingBot](https://user-images.githubusercontent.com/62056130/220243826-a2d5b589-63ce-47aa-aeb5-9f03f5257d2b.png)
+
+![IMG_2734](https://user-images.githubusercontent.com/62056130/220243882-87d2fad6-d4f3-47c1-96ff-5707fa68a3e7.jpg)
+
+![Untitled_Artwork](https://user-images.githubusercontent.com/62056130/220243918-9bca17a7-e67a-4279-8184-71c1395150fc.jpg)
+
+
 
 ### The Report
 This README.md page in your own repository should be edited to include the work you have done (the deliverables mentioned above).
-
 
 
 
@@ -227,9 +243,6 @@ dump_errors(odrv0) # If there is an error under axis0, rerun calibration `odrv0.
 # set velocity to 2 turns per second
 odrv0.axis0.controller.input_vel = 2
 # Your motor should spin now, take a note of the spinning direction of the wheel.
-```
-To stop the wheel, you must run the following two commands. Setting a wheel to zero velocity doesn't imply that the power is turned off. The controller is literally try to make the wheel move at 0 turn/sec. This will lock the wheel in place. Setting the state to idle disconnects wheels from power.
-```python
 odrv0.axis0.controller.input_vel = 0
 # This is important, the hub motors are not designed to have 0 velocity (it will lock the wheels and may start shaking), so we need to change its state to IDLE immediately.
 odrv0.axis0.requested_state = AXIS_STATE_IDLE
@@ -297,6 +310,7 @@ Check Canvas discussion channel "Final Project Ideas" for ideas. We posted some 
 ### Again, deliverables for this lab are:
 0. a video showing that you can control the hoverboard through python (functional checkoff. This is just to make sure you have a working set of hardware.)
 1. three sketches of potential robots you can build with this platform (what furniture can you automate?)
+
 
 
 
